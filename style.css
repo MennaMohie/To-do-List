@@ -109,6 +109,17 @@ ul li.checked::before {
   color: white;
 }
 
-.close:onclick{
-  deleteItem();
+/*Styling EDIT*/
+.edit {
+  margin: 0;
+  cursor: pointer;
+  font-size: 18px;
+  position: absolute;
+  right: 30px;
+  top: 0;
+  padding: 12px 10px 12px 10px;
+}
+.edit:hover {
+  background-color: teal;
+  color: white;
 }
