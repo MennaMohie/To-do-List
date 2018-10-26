@@ -47,5 +47,68 @@ input{
   cursor: pointer;
 }
 #add:hover{
-  background-color: #BBB;
+  background-color: #DDD;
+}
+
+/*Styling the list*/
+ul{
+  list-style-position: outside;
+}
+ul li {
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  padding: 12px 10px 12px 20px;
+  list-style-type: none;
+  background: #EEE;
+  font-size: 18px;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+ul li:nth-child(odd) {
+  background: #F9F9F9;
+}
+ul li:hover {
+  background: #DDD;
+}
+ul li.checked {
+  background: #888;
+  color: #FFF;
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: white;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 7px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 5px;
+}
+
+/*Styling the close button (span)*/
+.close {
+  margin: 0;
+  cursor: pointer;
+  font-size: 18px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 10px 12px 10px;
+}
+
+.close:hover {
+  background-color: teal;
+  color: white;
+}
+
+.close:onclick{
+  deleteItem();
 }
